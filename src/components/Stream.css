@@ -1,0 +1,77 @@
+.stream-cont {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: max-content;
+  letter-spacing: 0.075em;
+  gap: 2.5em;
+  & h1 {
+    font-size: 3.25rem;
+    letter-spacing: 0.075em;
+    @media (max-width: 600px) {
+      font-size: 2.125rem;
+    }
+  }
+  margin-inline: auto;
+  margin-top: 3em;
+}
+
+.stream {
+  display: flex;
+  width: 100%;
+  height: 5em;
+  align-items: center;
+
+  & .stream-element {
+    position: relative;
+    width: 5em;
+    height: 5em;
+    border-block: solid 2px white;
+    border-left: solid 2px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25em;
+    cursor: pointer;
+    &:nth-child(1) {
+      width: 10em;
+    }
+    &:last-child {
+      border-right: solid 2px white;
+    }
+    & svg {
+      width: 1.5em;
+      height: auto;
+    }
+  }
+}
+
+.stream-element-popup {
+  position: absolute;
+  /* bottom: 60%;
+  left: -25%; */
+  width: max-content;
+  padding: 0.5em;
+  translate: 0 -3.5em;
+  background-color: var(--White);
+  color: var(--Grey);
+  z-index: 2;
+  font-size: 0.75em;
+  /* &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: aqua;
+  } */
+}
+
+.stream-element-popup-icon {
+  position: absolute;
+  /* bottom: 60%;
+  left: -25%; */
+  width: 1em !important;
+  translate: 0 -1.65em;
+  z-index: 2;
+}
